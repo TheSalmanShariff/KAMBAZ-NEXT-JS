@@ -6,7 +6,7 @@ export default function Lab1() {
       <h1> Lab 1 </h1>
       <h2>Lab1- Salman Shariff</h2>
 
-      <a href="https://github.com/TheSalmanShariff/KAMBAZ-NEXT-JS.git" id="wd-github">
+      <a href="https://github.com/TheSalmanShariff/KAMBAZ-NEXT-JS" id="wd-github">
           My GitHub Repository
         </a>
 
