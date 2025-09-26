@@ -15,7 +15,7 @@ export default function Dashboard() {
             <div style={{ padding: '10px' }}>
               <h5>CS1234 React JS</h5>
               <p className="wd-dashboard-course-title">Full Stack software developer</p>
-              <button style={{ backgroundColor: '#dc3545', color: 'white', border: 'none', padding: '5px 10px' }}>Go</button>
+              <button type="button" style={{ backgroundColor: '#dc3545', color: 'white', border: 'none', padding: '5px 10px' }}>Go</button>
             </div>
           </Link>
         </div>
@@ -26,7 +26,7 @@ export default function Dashboard() {
             <div style={{ padding: '10px' }}>
               <h5>CS1235 Node.js</h5>
               <p className="wd-dashboard-course-title">Backend Development with Node.js</p>
-              <button style={{ backgroundColor: '#dc3545', color: 'white', border: 'none', padding: '5px 10px' }}>Go</button>
+              <button type="button" style={{ backgroundColor: '#dc3545', color: 'white', border: 'none', padding: '5px 10px' }}>Go</button>
             </div>
           </Link>
         </div>
@@ -37,7 +37,7 @@ export default function Dashboard() {
             <div style={{ padding: '10px' }}>
               <h5>CS1236 MongoDB</h5>
               <p className="wd-dashboard-course-title">NoSQL Database Management</p>
-              <button style={{ backgroundColor: '#dc3545', color: 'white', border: 'none', padding: '5px 10px' }}>Go</button>
+              <button type="button" style={{ backgroundColor: '#dc3545', color: 'white', border: 'none', padding: '5px 10px' }}>Go</button>
             </div>
           </Link>
         </div>
@@ -48,7 +48,7 @@ export default function Dashboard() {
             <div style={{ padding: '10px' }}>
               <h5>CS1237 HTML/CSS</h5>
               <p className="wd-dashboard-course-title">Web Fundamentals</p>
-              <button style={{ backgroundColor: '#dc3545', color: 'white', border: 'none', padding: '5px 10px' }}>Go</button>
+              <button type="button" style={{ backgroundColor: '#dc3545', color: 'white', border: 'none', padding: '5px 10px' }}>Go</button>
             </div>
           </Link>
         </div>
@@ -59,7 +59,7 @@ export default function Dashboard() {
             <div style={{ padding: '10px' }}>
               <h5>CS1238 Python</h5>
               <p className="wd-dashboard-course-title">Introduction to Python Programming</p>
-              <button style={{ backgroundColor: '#dc3545', color: 'white', border: 'none', padding: '5px 10px' }}>Go</button>
+              <button type="button" style={{ backgroundColor: '#dc3545', color: 'white', border: 'none', padding: '5px 10px' }}>Go</button>
             </div>
           </Link>
         </div>
@@ -70,7 +70,7 @@ export default function Dashboard() {
             <div style={{ padding: '10px' }}>
               <h5>CS1239 Java</h5>
               <p className="wd-dashboard-course-title">Object-Oriented Programming</p>
-              <button style={{ backgroundColor: '#dc3545', color: 'white', border: 'none', padding: '5px 10px' }}>Go</button>
+              <button type="button" style={{ backgroundColor: '#dc3545', color: 'white', border: 'none', padding: '5px 10px' }}>Go</button>
             </div>
           </Link>
         </div>
