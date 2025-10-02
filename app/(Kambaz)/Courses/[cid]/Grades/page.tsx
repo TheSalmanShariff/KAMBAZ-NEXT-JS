@@ -1,18 +1,18 @@
-
+// app/(Kambaz)/Courses/[cid]/Grades/page.tsx
 
 import styles from "./styles.module.css";
 
 export default function Grades() {
   const grades = [
-    { name: "A1", category: "ASSIGNMENTS", dueDate: "17 Sep by 23:59", submitted: "17 Sep at 18:24", status: "", score: "-", hasComment: true },
-    { name: "Q1", category: "QUIZZES", dueDate: "24 Sep by 23:59", submitted: "20 Sep at 17:32", status: "", score: "-", hasComment: true },
-    { name: "A2", category: "ASSIGNMENTS", dueDate: "1 Oct by 23:59", submitted: "", status: "", score: "-" },
-    { name: "Q2", category: "QUIZZES", dueDate: "1 Oct by 23:59", submitted: "25 Sep at 16:18", status: "", score: "-", hasComment: true },
-    { name: "Q3", category: "QUIZZES", dueDate: "8 Oct by 23:59", submitted: "", status: "", score: "- / 32" },
-    { name: "A3", category: "ASSIGNMENTS", dueDate: "15 Oct by 23:59", submitted: "", status: "", score: "-" },
-    { name: "Q4", category: "QUIZZES", dueDate: "15 Oct by 23:59", submitted: "", status: "", score: "- / 17" },
-    { name: "Q5", category: "QUIZZES", dueDate: "22 Oct by 23:59", submitted: "", status: "", score: "- / 31" },
-    { name: "A4", category: "ASSIGNMENTS", dueDate: "29 Oct by 23:59", submitted: "", status: "", score: "-" },
+    { name: "A1", category: "ASSIGNMENTS", dueDate: "17 Sep by 23:59", submitted: "17 Sep at 18:24", status: "", score: "100", hasComment: true, hasRubric: false, hasSubmission: 0 },
+    { name: "Q1", category: "QUIZZES", dueDate: "24 Sep by 23:59", submitted: "20 Sep at 17:32", status: "", score: "29/ 29", hasComment: true, hasRubric: false, hasSubmission: 0 },
+    { name: "A2", category: "ASSIGNMENTS", dueDate: "1 Oct by 23:59", submitted: "", status: "", score: "-", hasComment: false, hasRubric: false, hasSubmission: 0 },
+    { name: "Q2", category: "QUIZZES", dueDate: "1 Oct by 23:59", submitted: "25 Sep at 16:18", status: "", score: "23/ 23", hasComment: true, hasRubric: false, hasSubmission: 0 },
+    { name: "Q3", category: "QUIZZES", dueDate: "8 Oct by 23:59", submitted: "", status: "", score: "- / 32", hasComment: false, hasRubric: false, hasSubmission: 0 },
+    { name: "A3", category: "ASSIGNMENTS", dueDate: "15 Oct by 23:59", submitted: "", status: "", score: "-", hasComment: false, hasRubric: false, hasSubmission: 0 },
+    { name: "Q4", category: "QUIZZES", dueDate: "15 Oct by 23:59", submitted: "", status: "", score: "- / 17", hasComment: false, hasRubric: false, hasSubmission: 0 },
+    { name: "Q5", category: "QUIZZES", dueDate: "22 Oct by 23:59", submitted: "", status: "", score: "- / 31", hasComment: false, hasRubric: false, hasSubmission: 0 },
+    { name: "A4", category: "ASSIGNMENTS", dueDate: "29 Oct by 23:59", submitted: "", status: "", score: "-", hasComment: false, hasRubric: false, hasSubmission: 0 },
   ];
 
   const weightGroups = [
@@ -28,7 +28,7 @@ export default function Grades() {
       {/* Header */}
       <div className={styles.header}>
         <h1 className={styles.title}>Grades for . Salman Shariff</h1>
-        <button className={styles.printBtn}>🖨️ Print Grades</button>
+        <button className={styles.printBtn}>Print Grades</button>
       </div>
 
       {/* Filters */}
@@ -81,14 +81,14 @@ export default function Grades() {
                       {grade.score}
                       <div className={styles.scoreIcons}>
                         {grade.hasComment && (
-                          <span className={styles.icon}>💬</span>
+                      
                         )}
                         {grade.hasRubric && (
-                          <span className={styles.icon}>📊</span>
+                    
                         )}
-                        {grade.hasSubmission && (
+                        {grade.hasSubmission > 0 && (
                           <span className={styles.iconWithBadge}>
-                            <span className={styles.icon}>📎</span>
+                           
                             <span className={styles.badge}>{grade.hasSubmission}</span>
                           </span>
                         )}
@@ -105,7 +105,7 @@ export default function Grades() {
         <div className={styles.sidebar}>
           <div className={styles.sidebarCard}>
             <div className={styles.totalScore}>
-              <div className={styles.totalLabel}>Total: 100%</div>
+              <div className={styles.totalLabel}>Total: 100</div>
             </div>
 
             <div className={styles.sidebarSection}>
