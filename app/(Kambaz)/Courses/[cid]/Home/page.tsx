@@ -1,6 +1,6 @@
 
 import styles from "./styles.module.css";
-import CourseStatus from "./Status";
+import CourseStatus from "./status";
 
 export default function Home() {
   return (
