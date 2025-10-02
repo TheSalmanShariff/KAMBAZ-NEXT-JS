@@ -83,15 +83,7 @@ export default function Grades() {
                         {grade.hasComment && (
                         
                         )}
-                        {grade.hasRubric && (
-                          
-                        )}
-                        {grade.hasSubmission > 0 && (
-                          <span className={styles.iconWithBadge}>
-                            
-                            <span className={styles.badge}>{grade.hasSubmission}</span>
-                          </span>
-                        )}
+                        
                       </div>
                     </div>
                   </td>
