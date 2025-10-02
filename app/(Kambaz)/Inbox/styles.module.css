@@ -1,0 +1,146 @@
+.inboxContainer {
+  background: white;
+  min-height: 100vh;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 30px;
+  border-bottom: 1px solid #E5E5E5;
+}
+
+.title {
+  font-size: 28px;
+  font-weight: 400;
+  color: #2D3B45;
+  margin: 0;
+}
+
+.headerActions {
+  display: flex;
+  gap: 10px;
+}
+
+.settingsBtn {
+  padding: 10px 18px;
+  background: white;
+  border: 1px solid #C7CDD1;
+  border-radius: 3px;
+  color: #2D3B45;
+  font-size: 14px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.settingsBtn:hover {
+  background: #F5F5F5;
+}
+
+.composeBtn {
+  padding: 10px 18px;
+  background: #C83E4D;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.composeBtn:hover {
+  background: #B02E3D;
+}
+
+.toolbar {
+  display: flex;
+  gap: 15px;
+  padding: 15px 30px;
+  border-bottom: 1px solid #E5E5E5;
+  background: #FAFAFA;
+  align-items: center;
+}
+
+.filters {
+  display: flex;
+  gap: 10px;
+}
+
+.filterSelect {
+  padding: 8px 14px;
+  border: 1px solid #C7CDD1;
+  border-radius: 3px;
+  background: white;
+  font-size: 14px;
+  cursor: pointer;
+  min-width: 150px;
+}
+
+.searchWrapper {
+  flex: 1;
+  max-width: 400px;
+}
+
+.searchInput {
+  width: 100%;
+  padding: 8px 14px;
+  padding-left: 36px;
+  border: 1px solid #C7CDD1;
+  border-radius: 3px;
+  font-size: 14px;
+  background: white url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"><circle cx="6" cy="6" r="5" fill="none" stroke="%236B7780" stroke-width="1.5"/><path d="M10 10 L14 14" stroke="%236B7780" stroke-width="1.5" stroke-linecap="round"/></svg>') no-repeat 10px center;
+}
+
+.actions {
+  display: flex;
+  gap: 8px;
+  margin-left: auto;
+}
+
+.actionBtn {
+  padding: 8px 12px;
+  background: white;
+  border: 1px solid #C7CDD1;
+  border-radius: 3px;
+  color: #6B7780;
+  font-size: 16px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.actionBtn:hover {
+  background: #F5F5F5;
+  color: #2D3B45;
+}
+
+.emptyState {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 500px;
+  padding: 40px;
+}
+
+.emptyIcon {
+  margin-bottom: 20px;
+}
+
+.pandaIcon {
+  width: 120px;
+  height: 120px;
+}
+
+.emptyMessage {
+  font-size: 16px;
+  color: #6B7780;
+  font-weight: 400;
+}
