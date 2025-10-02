@@ -80,7 +80,7 @@ export default function Grades() {
                     <div className={styles.scoreWrapper}>
                       <span>{grade.score}</span>
                       <div className={styles.scoreIcons}>
-                        )}
+                        
                       </div>
                     </div>
                   </td>
