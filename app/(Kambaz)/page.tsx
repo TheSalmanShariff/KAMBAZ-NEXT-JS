@@ -1,5 +1,5 @@
-import Dashboard from "./Dashboard/page";
+import { redirect } from "next/navigation";
 
-export default function Kambaz() {
-  return <Dashboard />;
+export default function Home() {
+  redirect("/Account/Signin");
 }
