@@ -15,27 +15,41 @@ export default function CoursesLayout({
   const pathname = usePathname();
   const course = courses.find((course) => course._id === cid);
   
-  // Get the current page name from pathname
-  const getPageName = () => {
+  // Build breadcrumb path
+  const getBreadcrumbs = () => {
     const segments = pathname.split("/").filter(Boolean);
-    const lastSegment = segments[segments.length - 1];
+    // segments example: ['Courses', 'RS101', 'Assignments', 'A101']
     
-    // Map route segments to display names
-    const pageNames: { [key: string]: string } = {
-      'Home': 'Home',
-      'Modules': 'Modules',
-      'Assignments': 'Assignments',
-      'Quizzes': 'Quizzes',
-      'Grades': 'Grades',
-      'People': 'People',
-      'Piazza': 'Piazza',
-      'Zoom': 'Zoom',
-    };
+    const breadcrumbs = [];
     
-    return pageNames[lastSegment] || lastSegment;
+    // Start from index 2 (skip 'Courses' and course ID)
+    for (let i = 2; i < segments.length; i++) {
+      const segment = segments[i];
+      const path = '/' + segments.slice(0, i + 1).join('/');
+      
+      // Map segment names to display names
+      const displayNames: { [key: string]: string } = {
+        'Home': 'Home',
+        'Modules': 'Modules',
+        'Assignments': 'Assignments',
+        'Quizzes': 'Quizzes',
+        'Grades': 'Grades',
+        'People': 'People',
+        'Piazza': 'Piazza',
+        'Zoom': 'Zoom',
+      };
+      
+      breadcrumbs.push({
+        name: displayNames[segment] || segment,
+        path: path,
+        isLast: i === segments.length - 1
+      });
+    }
+    
+    return breadcrumbs;
   };
 
-  const currentPage = getPageName();
+  const breadcrumbs = getBreadcrumbs();
 
   return (
     <div id="wd-courses">
@@ -43,17 +57,28 @@ export default function CoursesLayout({
         <FaAlignJustify className="me-3 fs-4 mb-1" />
         <Link 
           href={`/Courses/${cid}`} 
-          className="text-danger text-decoration-none hover-underline"
+          className="text-danger text-decoration-none"
+          style={{ cursor: 'pointer' }}
         >
           {course && course.name}
         </Link>
-        <span className="mx-2">&gt;</span>
-        <Link 
-          href={pathname} 
-          className="text-danger text-decoration-none hover-underline"
-        >
-          {currentPage}
-        </Link>
+        
+        {breadcrumbs.map((crumb, index) => (
+          <span key={index}>
+            <span className="mx-2">&gt;</span>
+            {crumb.isLast ? (
+              <span>{crumb.name}</span>
+            ) : (
+              <Link 
+                href={crumb.path} 
+                className="text-danger text-decoration-none"
+                style={{ cursor: 'pointer' }}
+              >
+                {crumb.name}
+              </Link>
+            )}
+          </span>
+        ))}
       </h2>
       <hr />
       <div className="d-flex">
