@@ -4,6 +4,7 @@ import CourseNavigation from "./Navigation";
 import { courses } from "../../Database";
 import { FaAlignJustify } from "react-icons/fa6";
 import { usePathname, useParams } from "next/navigation";
+import Link from "next/link";
 
 export default function CoursesLayout({
   children,
@@ -31,15 +32,28 @@ export default function CoursesLayout({
       'Zoom': 'Zoom',
     };
     
-    // Return the mapped name or the segment itself
     return pageNames[lastSegment] || lastSegment;
   };
 
+  const currentPage = getPageName();
+
   return (
     <div id="wd-courses">
-      <h2 className="text-danger">
+      <h2 className="text-danger d-flex align-items-center">
         <FaAlignJustify className="me-3 fs-4 mb-1" />
-        {course && course.name} &gt; {getPageName()}
+        <Link 
+          href={`/Courses/${cid}`} 
+          className="text-danger text-decoration-none hover-underline"
+        >
+          {course && course.name}
+        </Link>
+        <span className="mx-2">&gt;</span>
+        <Link 
+          href={pathname} 
+          className="text-danger text-decoration-none hover-underline"
+        >
+          {currentPage}
+        </Link>
       </h2>
       <hr />
       <div className="d-flex">
