@@ -39,3 +39,6 @@ body * {
   background-color: white;
   border-left: 3px solid black !important;
 }
+.hover-underline:hover {
+  text-decoration: underline !important;
+}
